@@ -63,7 +63,7 @@ const Home = ({ onNavigate }) => {
                 {/* Floating Content Section */}
                 <div className="relative z-10 max-w-[850px] mx-auto flex flex-col items-center">
                     <p className="text-[1.4rem] sm:text-[1.8rem] font-medium leading-relaxed text-gray-400 mb-12 max-w-[780px] drop-shadow-sm" style={{ marginBottom: '50px' }}>
-                        ThesisDash is a modern dashboard designed to help students and educators eliminate the illusion of competence with precision real-time analytics.
+                        rbAI is a modern dashboard designed to help students and educators eliminate the illusion of competence with precision real-time analytics.
                     </p>
 
                     <button
