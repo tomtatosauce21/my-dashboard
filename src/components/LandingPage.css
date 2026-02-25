@@ -1,0 +1,281 @@
+.landing-page {
+    display: contents;
+}
+
+.landing-header {
+    height: 80px;
+    padding: 0 5%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.landing-header.scrolled {
+    position: fixed;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.landing-header-spacer {
+    height: 90px;
+}
+
+/* Headr Buttons */
+.About_Button,
+.contact_button,
+.home_button {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+.About_Button:hover,
+.contact_button:hover,
+.home_button:hover {
+    color: #1a1a1a;
+}
+
+/* Hero Content */
+.hero-content {
+    padding: 60px 10% 40px 10%;
+    /* Reduced top padding to move content even higher */
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: transparent;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+.Description_Bigger {
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+    /* Centers horizontally, smaller space below */
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    margin-top: 40px;
+}
+
+.Description {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #64748b;
+    margin-top: 9px;
+}
+
+.header-button {
+    padding: 1.2rem 4rem;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+    margin-top: 10px;
+    margin-bottom: 69px;
+}
+
+.header-button:hover {
+    transform: scale(1.05) translateY(-5px);
+    background: #4f46e5;
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.4);
+}
+
+/*light carousel */
+.team-carousel-section {
+    padding: 20px 5%;
+    background: transparent;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+.carousel-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+    color: #023246;
+}
+
+.carousel-container {
+    overflow-x: auto;
+    padding: 20px 0 60px 0;
+
+}
+
+.carousel-container::-webkit-scrollbar {
+    height: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #6366f1;
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: .7rem;
+    width: max-content;
+    padding: 0 20px;
+}
+
+/* Glass Card Styling */
+.glass-card {
+    background: #6d9795(194, 31%, 68%, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 240px;
+    /* Thinner cards */
+    transition: all 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.glass-card:hover {
+    background: #6d9795;
+    border-color: rgba(135, 220, 242, 0.3);
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* Grayscale for Transition */
+.image-container {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover .team-image {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.08);
+}
+
+/* Card Info */
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #f1f5f9;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #475569;
+}
+
+.leader .badge {
+    background: #e0e7ff;
+    color: #6366f1;
+    border: 1px solid #c7d2fe;
+}
+
+.adviser .badge {
+    background: #d1fae5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
+}
+
+.card-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #0f172a;
+}
+
+/*Navigation Buttons */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 40px;
+}
+
+.scroll-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #6366f1;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.scroll-btn:hover {
+    background: #6366f1;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+}
+
+.scroll-btn span {
+    line-height: 0;
+    margin-top: -4px;
+}
+
+.carousel-container {
+    scrollbar-width: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
