@@ -51,16 +51,6 @@ const Home = ({ onNavigate }) => {
                 {/* Subtle Dot Grid Overlay */}
                 <div className="absolute inset-0 z-[1] opacity-20 pointer-events-none dot-grid-bg" />
 
-                {/* Premium Feature Badge */}
-                <div className="relative z-10 mb-8 animate-fade-in">
-                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-lg">
-                        <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse" />
-                        <span className="text-sm font-bold text-gray-300 tracking-wide uppercase">
-                            ThesisDash v2.0 <span className="text-blue-400 mx-1">✦</span> Next-Gen Analytics →
-                        </span>
-                    </div>
-                </div>
-
                 <div className="relative z-10 max-w-[1200px] mx-auto mb-10">
                     <h2 className="text-[4.5rem] md:text-[6rem] font-black leading-[1.05] text-white tracking-tighter drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                         Identify True
