@@ -9,6 +9,8 @@ const inputClass = `
   focus:border-blue-600 focus:bg-white focus:shadow-[0_0_0_4px_rgba(37,99,235,0.1)]
 `
 
+// keiro
+
 const CopyableItem = ({ item }) => {
     const [copied, setCopied] = useState(false)
 
