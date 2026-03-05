@@ -7,7 +7,7 @@ const Navbar = ({ activeSection, onNavigate }) => {
         { name: 'About', label: 'About' },
         { name: 'Team', label: 'Our Team' },
         { name: 'Contact', label: 'Contact Us' },
-        { name: 'Docs', label: 'Docs' }
+        // { name: 'Docs', label: 'Docs' }
     ]
 
     return (

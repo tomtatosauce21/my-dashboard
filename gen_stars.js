@@ -2,8 +2,11 @@ import fs from 'fs';
 
 function generateStars(n) {
     let shadows = [];
-    for (let i = 0; i < n; i++) {
-        shadows.push(`${Math.floor(Math.random() * 2000)}px ${Math.floor(Math.random() * 2000)}px #fff`);
+    // Slightly lessened density: from 12x down to 9x
+    const count = n * 9; 
+    for (let i = 0; i < count; i++) {
+        // Keeping the tighter 3500px range so gaps are still controlled, but with fewer stars
+        shadows.push(`${Math.floor(Math.random() * 3500)}px ${Math.floor(Math.random() * 3500)}px #fff`);
     }
     return shadows.join(',\n      ');
 }

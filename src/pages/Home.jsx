@@ -96,9 +96,9 @@ const Home = ({ onNavigate }) => {
     ]
 
     return (
-        <div className="w-full flex flex-col bg-transparent">
+        <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory bg-[#050505] relative overflow-x-hidden">
             {/* Global Starry Animation Background */}
-            <div className="stars-bg">
+            <div className="stars-bg fixed inset-0 z-0 pointer-events-none overflow-hidden">
                 <div id="stars"></div>
                 <div id="stars2"></div>
                 <div id="stars3"></div>
@@ -130,7 +130,7 @@ const Home = ({ onNavigate }) => {
                         className="px-12 py-7 min-w-[290px] min-h-[70px] border-2 border-blue-400 shadow-[0_0_15px_rgba(9, 9, 121, 0.65)] text-white font-bold rounded-xl cursor-pointer text-[1.7rem] 
                             transition-all duration-300 inline-flex items-center justify-center
                             hover:bg-blue-700 hover:shadow-[0_12px_24px_rgba(37,99,235,0.4)]
-                            active:scale-95" style={{ marginBottom: '100px', marginTop: '70px' }}
+                            active:scale-95" style={{ marginBottom: '100px', marginTop: '30px' }}
                         onClick={() => onNavigate('Dashboard')}
                     >
                         Launch
@@ -139,35 +139,35 @@ const Home = ({ onNavigate }) => {
             </div>
 
             {/* About section */}
-            <section id="about" className="relative w-full min-h-screen flex flex-col items-center justify-center snap-start snap-always px-4 sm:px-8 overflow-hidden bg-transparent border-t border-white/5">
-                <div className="relative z-10 max-w-[1200px] w-full mx-auto">
+            <section id="about" className="relative w-full min-h-screen flex flex-col items-center justify-center snap-start snap-always px-8 sm:px-12 md:px-16 overflow-hidden bg-transparent border-t border-white/5">
+                <div className="relative z-10 max-w-[1400px] w-full mx-auto py-16">
 
                     {/* Title */}
-                    <div className="text-center mb-10">
-                        <h2 className="text-[clamp(2.5rem,6vw,4rem)] font-black leading-[3.4] tracking-tight mt-3 text-white" style={{ marginTop: '10px' }}>
-                            About <span className="bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">Us</span>
+                    <div className="text-center mb-12" style={{marginTop: '80px'}}>
+                        <h2 className="text-[clamp(2.5rem,6vw,4rem)] font-black leading-[1.2] tracking-tight text-white">
+                            About <span className="bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent" >Us</span>
                         </h2>
                     </div>
 
                     {/* Two cards side by side */}
-                    <div className="flex flex-col xl:flex-row items-center justify-between gap-20 lg:gap-20" style={{ marginTop: '10px' }}>
+                    <div className="flex flex-col xl:flex-row items-stretch justify-center gap-12 lg:gap-12"style={{marginTop: '30px'}}>
 
                         {/* Mission Card */}
-                        <div className="group bg-transparent border border-white/10 rounded-[24px] shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-md overflow-hidden flex flex-col w-full max-w-[800px] hover:border-blue-400/50 transition-colors duration-300" style={{ padding: '40px' }}>
-                            <div className="p-8 flex flex-col items-center flex-1">
-                                <h3 className="text-[2.8rem] font-black text-white text-center mb-4">Our Mission</h3>
-                                <p className="text-[1.6rem] leading-[2.0] text-gray-300 text-center max-w-[90%]">
-                                    We believe every student deserves accurate feedback. Our mission is to give educators tools to identify genuine understanding versus superficial knowledge — powered by real-time analytics.
+                        <div className="group bg-white/5 border border-white/10 rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl overflow-hidden flex flex-col w-full hover:border-blue-400/50 transition-all duration-500 hover:shadow-blue-500/10" style={{ padding: '60px 50px' }}>
+                            <div className="flex flex-col items-center flex-1 h-full justify-center">
+                                <h3 className="text-[2.8rem] font-black text-white text-center mb-10">Our Mission</h3>
+                                <p className="text-[1.35rem] leading-[2.1] text-gray-300 text-center max-w-[95%]">
+                                    Our mission is to develop and deploy rbAI, a behavior-monitored coding playground with prompt-engineered AI guidance. This system creates a process-oriented learning environment by using behavioral analytics for integrity-aware insights and indirect scaffolding to prevent over-reliance on automated solutions.
                                 </p>
                             </div>
                         </div>
 
                         {/* Vision Card */}
-                        <div className="group bg-transparent border border-white/10 rounded-[24px] shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-md overflow-hidden flex flex-col w-full max-w-[800px] hover:border-pink-400/50 transition-colors duration-300" style={{ padding: '40px' }}>
-                            <div className="p-8 flex flex-col items-center flex-1" >
-                                <h3 className="text-[2.8rem] font-black text-white text-center mb-4">Our Vision</h3>
-                                <p className="text-[1.6rem] leading-[2.0] text-gray-300 text-center max-w-[90%]">
-                                    We envision a future where learning assessment is intelligent, fair, and accessible worldwide. By leveraging data science and pedagogy, we transform how institutions measure learning outcomes.
+                        <div className="group bg-white/5 border border-white/10 rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl overflow-hidden flex flex-col w-full hover:border-emerald-400/50 transition-all duration-500 hover:shadow-emerald-500/10" style={{ padding: '60px 50px' }}>
+                            <div className="flex flex-col items-center flex-1 h-full justify-center">
+                                <h3 className="text-[2.8rem] font-black text-white text-center mb-10">Our Vision</h3>
+                                <p className="text-[1.35rem] leading-[2.1] text-gray-300 text-center max-w-[95%]">
+                                    To cultivate a future generation of novice programmers who master authentic computational skills, sustained by genuine cognitive engagement and academic integrity in the age of AI. We aim to transform programming education through augmented intelligence that supports productive struggle, not automated answers.
                                 </p>
                             </div>
                         </div>
@@ -199,14 +199,14 @@ const Home = ({ onNavigate }) => {
             </section>
 
             {/* Contact section */}
-            <section id="contact" className="relative w-full pt-24 min-h-screen flex flex-col items-center justify-between snap-start snap-always overflow-hidden bg-transparent border-t border-white/5">
-                <div className="relative z-10 max-w-[1300px] flex flex-col items-center w-full px-4 sm:px-6 md:px-8 flex-1 justify-center">
+            <section id="contact" className="relative w-full min-h-screen flex flex-col items-center justify-center snap-start snap-always overflow-hidden bg-transparent border-t border-white/5">
+                <div className="relative z-10 max-w-[1300px] flex flex-col items-center w-full px-4 sm:px-6 md:px-8">
                     {/* Info side (Now Top) */}
                     <div className="px-4 text-center mb-16 flex flex-col items-center">
-                        <span className="leading-[0.8] font-black text-sm text-blue-400 tracking-[0.4em] uppercase bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent" style={{marginTop: '20px'}}>Let's Start a Conversation</span>
-                        <h2 className="text-[clamp(2.7rem,5vw,4rem)] font-black my-6 tracking-tight text-white flex items-center gap-4" style={{ marginBottom: '20px' }}>
+                    <h2 className="text-[clamp(2.7rem,5vw,4rem)] font-black my-6 tracking-tight text-white flex items-center gap-4" style={{ marginTop: '20px' }}>
                             Contact <span className=" leading-[0.9] bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">Us</span>
                         </h2>
+                        <span className="leading-[0.8] font-black text-sm text-blue-400 tracking-[0.4em] uppercase bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent" style={{marginBottom: '50px'}}>Let's Start a Conversation</span>
                     </div>
 
                     {/* Horizontal layout: 3 side-by-side standalone containers */}
@@ -256,16 +256,17 @@ const Home = ({ onNavigate }) => {
 
                     </div>
                 </div>
+            </section>
 
-                {/* Footer - Full Width */}
-                <footer className="relative z-10 w-full mt-auto border-t border-white/10" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9))' }}>
-                    {/* Upper Footer */}
-                    <div className="max-w-[1300px] mx-auto px-8 pt-28 pb-24 grid grid-cols-1 md:grid-cols-3 gap-24">
+            {/* Footer section - half screen block */}
+            <footer className="relative z-10 w-full min-h-[50vh] flex flex-col snap-start snap-always overflow-hidden border-t border-white/5" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9))' }}>
+                <div className="flex-1 flex items-center justify-center py-20">
+                    <div className="max-w-[1300px] mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-24 w-full">
 
                         {/* Brand Column */}
                         <div className="flex flex-col gap-8">
                             <div className="flex flex-col gap-3">
-                                <span className="text-4xl font-black bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent tracking-tighter" style={{ marginLeft: '50px', marginTop: '50px' }}>
+                                <span className="text-4xl font-black bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent tracking-tighter" style={{ marginLeft: '50px' }}>
                                     rbAI
                                 </span>
                                 <p className="text-[1.1rem] text-gray-400 leading-[1.9] max-w-[400px]" style={{ marginLeft: '50px' }}>
@@ -273,7 +274,7 @@ const Home = ({ onNavigate }) => {
                                 </p>
                             </div>
                             {/* Social icons */}
-                            <div className="flex items-center gap-5 mt-2" style={{ marginLeft: '50px', marginBottom: '10px' }}>
+                            <div className="flex items-center gap-5 mt-2" style={{ marginLeft: '50px' }}>
                                 {[
                                     { label: 'Facebook', icon: (
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -305,8 +306,8 @@ const Home = ({ onNavigate }) => {
 
                         {/* Quick Links */}
                         <div className="flex flex-col gap-10">
-                            <h4 className="text-sm font-black text-white tracking-[0.3em] uppercase opacity-50 whitespace-nowrap ml-[250px]" style={{marginLeft:'250px', marginTop:'2rem'}}>Quick Links</h4>
-                            <div className="flex flex-col gap-5 whitespace-nowrap ml-[250px]"style={{marginLeft: '250px'}} >
+                            <h4 className="text-sm font-black text-white tracking-[0.3em] uppercase opacity-50 whitespace-nowrap ml-[250px]">Quick Links</h4>
+                            <div className="flex flex-col gap-5 whitespace-nowrap ml-[250px]" >
                                 {[
                                     { label: '🏠  Home', section: 'Home' },
                                     { label: 'ℹ️  About Us', section: 'About' },
@@ -327,8 +328,8 @@ const Home = ({ onNavigate }) => {
 
                         {/* Contact Info */}
                         <div className="flex flex-col gap-8">
-                            <h4 className="text-sm font-black text-white tracking-[0.3em] uppercase opacity-50 whitespace-nowrap ml-[250px]" style={{marginLeft: '250px',marginTop: '2rem'}}>Get in Touch</h4>
-                            <div className="flex flex-col gap-6 text-[1.05rem] text-gray-400 whitespace-nowrap ml-[250px] " style={{marginLeft: '250px'}}>
+                            <h4 className="text-sm font-black text-white tracking-[0.3em] uppercase opacity-50 whitespace-nowrap ml-[250px]">Get in Touch</h4>
+                            <div className="flex flex-col gap-6 text-[1.05rem] text-gray-400 whitespace-nowrap ml-[250px]">
                                 <div className="flex items-start gap-4 ">
                                     <span className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 shrink-0">📱</span>
                                     <div className="flex flex-col gap-1">
@@ -343,29 +344,22 @@ const Home = ({ onNavigate }) => {
                                         <span>contact@rbai.edu.ph</span>
                                     </div>
                                 </div>
-                                <div className="flex items-start gap-4">
-                                    <span className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 shrink-0">📍</span>
-                                    <div className="flex flex-col gap-1">
-                                        <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Location</span>
-                                        <span className="leading-relaxed">Ramon Bantug Agricultural Institute,<br />Nueva Ecija, Philippines</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
                     </div>
+                </div>
 
-                    {/* Divider */}
-                    <div className="border-t border-white/5 mx-8" />
+                {/* Divider */}
+                <div className="border-t border-white/5 mx-8" />
 
-                    {/* Bottom Bar */}
-                    <div className="w-full flex justify-center text-center py-12"style={{marginTop:'20px', marginBottom: '20px'}}>
-                        <span className="text-[1.1rem] text-gray-600 font-medium tracking-wide">
-                            &copy; {new Date().getFullYear()} rbAI — Ramon Bantug Agricultural Institute. All rights reserved.
-                        </span>
-                    </div>
-                </footer>
-            </section >
+                {/* Bottom Bar */}
+                <div className="w-full flex justify-center text-center py-12">
+                    <span className="text-[1.1rem] text-gray-600 font-medium tracking-wide">
+                        &copy; {new Date().getFullYear()} rbAI — All rights reserved.
+                    </span>
+                </div>
+            </footer>
         </div >
     )
 }
