@@ -138,9 +138,9 @@ html {
 /* Custom Stars Background */
 .stars-bg {
   position: fixed;
-  inset:  -200vw -200vh;
-  width: 500vw;
-  height: 500vh;
+  inset: -5000px;
+  width: 15000px;
+  height: 15000px;
   z-index: 0;
   background-color: #050505;
   background-image:

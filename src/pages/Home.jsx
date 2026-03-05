@@ -98,10 +98,12 @@ const Home = ({ onNavigate }) => {
     return (
         <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory bg-[#050505] relative overflow-x-hidden">
             {/* Global Starry Animation Background */}
-            <div className="stars-bg fixed inset-0 z-0 pointer-events-none overflow-hidden">
-                <div id="stars"></div>
-                <div id="stars2"></div>
-                <div id="stars3"></div>
+            <div className="fixed inset-0 z-0 pointer-events-none bg-[#050505]">
+                <div className="stars-bg absolute inset-0">
+                    <div id="stars"></div>
+                    <div id="stars2"></div>
+                    <div id="stars3"></div>
+                </div>
             </div>
 
             {/* Hero section */}
@@ -130,7 +132,7 @@ const Home = ({ onNavigate }) => {
                         className="px-12 py-7 min-w-[290px] min-h-[70px] border-2 border-blue-400 shadow-[0_0_15px_rgba(9, 9, 121, 0.65)] text-white font-bold rounded-xl cursor-pointer text-[1.7rem] 
                             transition-all duration-300 inline-flex items-center justify-center
                             hover:bg-blue-700 hover:shadow-[0_12px_24px_rgba(37,99,235,0.4)]
-                            active:scale-95" style={{ marginBottom: '100px', marginTop: '30px' }}
+                            active:scale-95" style={{ marginBottom: '60px', marginTop: '10px' }}
                         onClick={() => onNavigate('Dashboard')}
                     >
                         Launch
@@ -203,10 +205,10 @@ const Home = ({ onNavigate }) => {
                 <div className="relative z-10 max-w-[1300px] flex flex-col items-center w-full px-4 sm:px-6 md:px-8">
                     {/* Info side (Now Top) */}
                     <div className="px-4 text-center mb-16 flex flex-col items-center">
-                    <h2 className="text-[clamp(2.7rem,5vw,4rem)] font-black my-6 tracking-tight text-white flex items-center gap-4" style={{ marginTop: '20px' }}>
+                    <h2 className="text-[clamp(2.7rem,5vw,4rem)] font-black my-6 tracking-tight text-white flex items-center gap-4" >
                             Contact <span className=" leading-[0.9] bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">Us</span>
                         </h2>
-                        <span className="leading-[0.8] font-black text-sm text-blue-400 tracking-[0.4em] uppercase bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent" style={{marginBottom: '50px'}}>Let's Start a Conversation</span>
+                        <span className="leading-[0.8] font-black text-sm text-blue-400 tracking-[0.4em] uppercase bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent" style={{marginBottom: '60px'}}>Let's Start a Conversation</span>
                     </div>
 
                     {/* Horizontal layout: 3 side-by-side standalone containers */}
@@ -220,7 +222,7 @@ const Home = ({ onNavigate }) => {
                                 </div>
                                 <h3 className="text-3xl font-black bg-gradient-to-r from-blue-400 via-indigo-4500 to-emerald-500 bg-clip-text text-transparent tracking-tight">Message Us</h3>
                             </div>
-                            <p className="text-[1.4rem] text-gray-300" style={{ marginBottom: '20px', marginTop: '20px' }}>
+                            <p className="text-[1.4rem] text-gray-300" style={{ marginBottom: '20px', marginTop: '2.5' }}>
                                 For quick questions and mobile support.
                             </p>
                             <CircleMenu items={['8940437812', '8940437812', '8940437812', '8940437812']} />
@@ -248,7 +250,7 @@ const Home = ({ onNavigate }) => {
                                 </div>
                                 <h3 className=" text-3xl font-black bg-gradient-to-r from-blue-400 via-indigo-5400 to-emerald-500 bg-clip-text text-transparent tracking-tight">Send Us Email</h3>
                             </div>
-                            <p className="text-[1.4rem] text-gray-300" style={{ marginBottom: '10px', marginTop: '1.8rem' }}>
+                            <p className="text-[1.4rem] text-gray-300" style={{ marginBottom: '10px', marginTop: '2.2rem' }}>
                                 For detailed inquiries or feedback.
                             </p>
                             <CircleMenu items={['Support Team', 'Send Feedback', 'Partnership', 'Other']} />
