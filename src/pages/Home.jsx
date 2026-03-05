@@ -3,12 +3,6 @@ import adminDp from '../assets/admin_dp.png'
 import studDp from '../assets/stud_dp.png'
 import Rbai from '../assets/Rbai.png'
 
-const inputClass = `
-  w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-[12px] font-[inherit] text-base
-  text-black transition-all duration-200 outline-none
-  focus:border-blue-600 focus:bg-white focus:shadow-[0_0_0_4px_rgba(37,99,235,0.1)]
-`
-
 // keiro
 
 const CopyableItem = ({ item }) => {
@@ -100,24 +94,6 @@ const Home = ({ onNavigate }) => {
         { name: 'Kennroe Basseg', role: 'Member', type: 'member', img: studDp },
         { name: 'Shine Telan', role: 'Member', type: 'member', img: studDp },
     ]
-
-    const inputbox = {
-        minHeight: '50px',
-        maxWidth: '350px',
-        marginLeft: '10px',
-        fontSize: '1.2rem',
-        paddingLeft: '1rem',
-        paddingRight: '1rem',
-        display: 'flex',
-        alignItems: 'center',
-        boxSizing: 'border-box '
-    }
-
-    const labelStyle = {
-        marginBottom: '10px',
-        marginLeft: '5px',
-        fontSize: '1.3rem'
-    }
 
     return (
         <div className="w-full flex flex-col bg-transparent">
@@ -227,8 +203,8 @@ const Home = ({ onNavigate }) => {
                 <div className="relative z-10 max-w-[1300px] flex flex-col items-center w-full px-4 sm:px-6 md:px-8 flex-1 justify-center">
                     {/* Info side (Now Top) */}
                     <div className="px-4 text-center mb-16 flex flex-col items-center">
-                        <span className="font-black text-sm text-blue-400 tracking-[0.4em] uppercase bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">Let's Start a Conversation</span>
-                        <h2 className="text-[clamp(2.7rem,5vw,4rem)] font-black my-6 tracking-tight text-white flex items-center gap-4" style={{ marginBottom: '50px' }}>
+                        <span className="leading-[0.8] font-black text-sm text-blue-400 tracking-[0.4em] uppercase bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent" style={{marginTop: '20px'}}>Let's Start a Conversation</span>
+                        <h2 className="text-[clamp(2.7rem,5vw,4rem)] font-black my-6 tracking-tight text-white flex items-center gap-4" style={{ marginBottom: '20px' }}>
                             Contact <span className=" leading-[0.9] bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">Us</span>
                         </h2>
                     </div>
@@ -281,8 +257,114 @@ const Home = ({ onNavigate }) => {
                     </div>
                 </div>
 
-                {/* Empty Footer Space - Full Width */}
-                <div className="relative z-10 w-full h-[150px] mt-auto bg-black/40 border-t border-white/10"></div>
+                {/* Footer - Full Width */}
+                <footer className="relative z-10 w-full mt-auto border-t border-white/10" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9))' }}>
+                    {/* Upper Footer */}
+                    <div className="max-w-[1300px] mx-auto px-8 pt-28 pb-24 grid grid-cols-1 md:grid-cols-3 gap-24">
+
+                        {/* Brand Column */}
+                        <div className="flex flex-col gap-8">
+                            <div className="flex flex-col gap-3">
+                                <span className="text-4xl font-black bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent tracking-tighter" style={{ marginLeft: '50px', marginTop: '50px' }}>
+                                    rbAI
+                                </span>
+                                <p className="text-[1.1rem] text-gray-400 leading-[1.9] max-w-[400px]" style={{ marginLeft: '50px' }}>
+                                    A modern analytics dashboard designed to help educators identify true mastery — not just the illusion of it.
+                                </p>
+                            </div>
+                            {/* Social icons */}
+                            <div className="flex items-center gap-5 mt-2" style={{ marginLeft: '50px', marginBottom: '10px' }}>
+                                {[
+                                    { label: 'Facebook', icon: (
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3l-.5 3H13v6.8c4.56-.93 8-4.96 8-9.8z"/>
+                                        </svg>
+                                    )},
+                                    { label: 'GitHub', icon: (
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                        </svg>
+                                    )},
+                                    { label: 'Email', icon: (
+                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    )},
+                                ].map(({ label, icon }) => (
+                                    <button
+                                        key={label}
+                                        type="button"
+                                        title={label}
+                                        className="w-12 h-12 rounded-2xl flex items-center justify-center text-gray-400 border border-white/5 bg-white/5 hover:text-white hover:border-blue-400 hover:bg-blue-400/10 transition-all duration-300 cursor-pointer"
+                                    >
+                                        {icon}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Quick Links */}
+                        <div className="flex flex-col gap-10">
+                            <h4 className="text-sm font-black text-white tracking-[0.3em] uppercase opacity-50 whitespace-nowrap ml-[250px]" style={{marginLeft:'250px', marginTop:'2rem'}}>Quick Links</h4>
+                            <div className="flex flex-col gap-5 whitespace-nowrap ml-[250px]"style={{marginLeft: '250px'}} >
+                                {[
+                                    { label: '🏠  Home', section: 'Home' },
+                                    { label: 'ℹ️  About Us', section: 'About' },
+                                    { label: '👥  Our Team', section: 'Team' },
+                                    { label: '📬  Contact Us', section: 'Contact' }
+                                ].map(({ label, section }) => (
+                                    <button
+                                        key={section}
+                                        type="button"
+                                        onClick={() => onNavigate(section)}
+                                        className="text-left text-[1.05rem] text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 bg-transparent border-none cursor-pointer w-fit"
+                                    >
+                                        {label}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Contact Info */}
+                        <div className="flex flex-col gap-8">
+                            <h4 className="text-sm font-black text-white tracking-[0.3em] uppercase opacity-50 whitespace-nowrap ml-[250px]" style={{marginLeft: '250px',marginTop: '2rem'}}>Get in Touch</h4>
+                            <div className="flex flex-col gap-6 text-[1.05rem] text-gray-400 whitespace-nowrap ml-[250px] " style={{marginLeft: '250px'}}>
+                                <div className="flex items-start gap-4 ">
+                                    <span className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 shrink-0">📱</span>
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Phone</span>
+                                        <span>+63 894 043 7812</span>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4">
+                                    <span className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0">📧</span>
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Email</span>
+                                        <span>contact@rbai.edu.ph</span>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4">
+                                    <span className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 shrink-0">📍</span>
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Location</span>
+                                        <span className="leading-relaxed">Ramon Bantug Agricultural Institute,<br />Nueva Ecija, Philippines</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {/* Divider */}
+                    <div className="border-t border-white/5 mx-8" />
+
+                    {/* Bottom Bar */}
+                    <div className="w-full flex justify-center text-center py-12"style={{marginTop:'20px', marginBottom: '20px'}}>
+                        <span className="text-[1.1rem] text-gray-600 font-medium tracking-wide">
+                            &copy; {new Date().getFullYear()} rbAI — Ramon Bantug Agricultural Institute. All rights reserved.
+                        </span>
+                    </div>
+                </footer>
             </section >
         </div >
     )
