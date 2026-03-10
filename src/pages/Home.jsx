@@ -104,6 +104,26 @@ const Home = ({ onNavigate }) => {
                     <div id="stars2"></div>
                     <div id="stars3"></div>
                 </div>
+
+                {/* Floating Tech Logos */}
+                {[
+                    { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', alt: 'HTML5', width: 54, top: '8%',  left: '5%',  duration: '7s',   delay: '0s'   },
+                    { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', alt: 'HTML5', width: 38, top: '62%', left: '80%', duration: '9s',   delay: '2s'   },
+                    { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',   alt: 'CSS3',  width: 50, top: '25%', left: '88%', duration: '8s',   delay: '1s'   },
+                    { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',   alt: 'CSS3',  width: 36, top: '78%', left: '12%', duration: '11s',  delay: '3.5s' },
+                    { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', alt: 'Python', width: 52, top: '50%', left: '4%',  duration: '10s',  delay: '0.5s' },
+                    { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', alt: 'Python', width: 40, top: '15%', left: '75%', duration: '8.5s', delay: '4s'   },
+                    { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',   alt: 'Java',  width: 56, top: '72%', left: '60%', duration: '9.5s', delay: '1.5s' },
+                    { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',   alt: 'Java',  width: 42, top: '38%', left: '93%', duration: '12s',  delay: '5s'   },
+                ].map((logo, i) => (
+                    <img
+                        key={i}
+                        src={logo.src}
+                        alt={logo.alt}
+                        className="floating-logo"
+                        style={{ width: logo.width, top: logo.top, left: logo.left, animationDuration: logo.duration, animationDelay: logo.delay }}
+                    />
+                ))}
             </div>
 
             {/* Hero section */}

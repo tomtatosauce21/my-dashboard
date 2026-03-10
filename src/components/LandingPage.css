@@ -279,3 +279,27 @@
 .carousel-container::-webkit-scrollbar {
     display: none;
 }
+
+/* Floating Tech Logos */
+@keyframes floatLogo {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.12;
+    }
+    33% {
+        transform: translateY(-22px) rotate(6deg);
+        opacity: 0.22;
+    }
+    66% {
+        transform: translateY(12px) rotate(-4deg);
+        opacity: 0.17;
+    }
+}
+
+.floating-logo {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    animation: floatLogo ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.15));
+}
